@@ -248,7 +248,6 @@ func (cLogger *commonLogger) errorWithCallDepth(callDepth int, message fmt.Strin
 
 func (cLogger *commonLogger) criticalWithCallDepth(callDepth int, message fmt.Stringer) {
 	cLogger.log(CriticalLvl, message, callDepth)
-	cLogger.innerLogger.Flush()
 }
 
 func (cLogger *commonLogger) Closed() bool {
